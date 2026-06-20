@@ -279,6 +279,72 @@
       font-style: italic; color: var(--muted); font-size: 0.95rem; line-height: 1.7;
     }
 
+    /* ─── EDU PROJECTS ─── */
+    #edu { background: var(--surface); }
+    .edu-header { text-align: center; margin-bottom: 56px; }
+    .edu-header .section-desc { margin: 0 auto; }
+    .edu-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px; max-width: 1150px; margin: 0 auto;
+    }
+    .edu-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 18px; overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .edu-card:hover { border-color: rgba(99,130,255,0.4); transform: translateY(-4px); }
+    .edu-mock {
+      padding: 22px; min-height: 200px;
+      display: flex; flex-direction: column; gap: 10px;
+      position: relative;
+    }
+    .edu-mock-title {
+      font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 0.95rem;
+      color: #fff; display: flex; align-items: center; gap: 8px; margin-bottom: 4px;
+    }
+    .edu-mock-sub { font-size: 0.72rem; color: rgba(255,255,255,0.75); margin-bottom: 10px; }
+
+    /* Mock 1: worksheets hub */
+    .mock-hub { background: linear-gradient(135deg, #ff9a8b 0%, #6c63ff 50%, #43e97b 100%); }
+    .mock-hub-nav { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 12px; }
+    .mock-pill { background: rgba(255,255,255,0.25); border-radius: 100px; padding: 3px 9px; font-size: 0.62rem; color: #fff; font-weight: 600; }
+    .mock-hub-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .mock-tile { background: rgba(255,255,255,0.92); border-radius: 8px; padding: 10px 6px; text-align: center; }
+    .mock-tile-icon { font-size: 1.1rem; }
+    .mock-tile-label { font-size: 0.58rem; font-weight: 700; color: #333; margin-top: 3px; }
+
+    /* Mock 2: vocabulary cards */
+    .mock-vocab { background: #f4f1ff; }
+    .mock-vocab-bar { background: #fff; border-radius: 10px; padding: 10px 14px; display: flex; justify-content: space-between; margin-bottom: 10px; }
+    .mock-vocab-stat { text-align: center; }
+    .mock-vocab-num { font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #6c63ff; font-size: 0.95rem; }
+    .mock-vocab-lbl { font-size: 0.55rem; color: #888; }
+    .mock-vocab-tabs { display: flex; gap: 4px; margin-bottom: 10px; }
+    .mock-tab { font-size: 0.6rem; padding: 4px 9px; border-radius: 100px; background: #fff; color: #555; font-weight: 600; }
+    .mock-tab.active { background: #6c63ff; color: #fff; }
+    .mock-vocab-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .mock-vocab-card { background: #fff; border-radius: 8px; padding: 8px 4px; text-align: center; }
+    .mock-vocab-icon { font-size: 1rem; }
+    .mock-vocab-en { font-size: 0.58rem; font-weight: 700; color: #222; }
+    .mock-vocab-es { font-size: 0.5rem; color: #999; }
+
+    /* Mock 3: games */
+    .mock-games { background: #fff3d6; }
+    .mock-games-title { text-align: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #6c4fd6; font-size: 0.95rem; margin-bottom: 12px; }
+    .mock-games-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+    .mock-game-box { background: #fff; border-radius: 9px; padding: 8px 6px; text-align: center; }
+    .mock-game-label { font-size: 0.6rem; font-weight: 700; color: #444; margin-top: 4px; }
+    .mock-letters { display: grid; grid-template-columns: repeat(6, 1fr); gap: 3px; margin-top: 6px; }
+    .mock-letter { background: #ffb347; border-radius: 50%; width: 16px; height: 16px; font-size: 0.5rem; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; }
+
+    .edu-info { padding: 20px 24px; border-top: 1px solid var(--border); }
+    .edu-tag {
+      display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 8px;
+    }
+    .edu-title { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 8px; }
+    .edu-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.6; }
+
     /* ─── TOOLS ─── */
     #tools { text-align: center; }
     .tools-header { margin-bottom: 48px; }
@@ -365,6 +431,7 @@
       .case-body { grid-template-columns: 1fr; gap: 32px; }
       .nav-links { display: none; }
       .flow-arrow { display: none; }
+      .mock-hub-grid { grid-template-columns: repeat(4, 1fr); }
       footer { flex-direction: column; text-align: center; }
     }
   </style>
@@ -378,6 +445,7 @@
     <li><a href="#services">Servicios</a></li>
     <li><a href="#why">Por qué yo</a></li>
     <li><a href="#case">Casos de éxito</a></li>
+    <li><a href="#edu">Educativos</a></li>
     <li><a href="#contact">Contacto</a></li>
   </ul>
   <a href="#contact" class="nav-cta">Hablemos →</a>
@@ -543,6 +611,92 @@
     <div class="case-quote">
       "Una estrategia digital integral que combinó creatividad, tecnología e inteligencia artificial para posicionar la marca en el sector agroindustrial."
     </div>
+  </div>
+</section>
+
+<!-- EDU PROJECTS -->
+<section id="edu">
+  <div class="edu-header">
+    <div class="section-label">Proyectos educativos</div>
+    <h2 class="section-title">Edición de páginas web educativas</h2>
+    <p class="section-desc">Diseño y desarrollo de plataformas interactivas para el aprendizaje de idiomas, combinando pedagogía, gamificación y una experiencia visual atractiva para niños.</p>
+  </div>
+  <div class="edu-grid">
+
+    <!-- Card 1: Worksheets Hub -->
+    <div class="edu-card">
+      <div class="edu-mock mock-hub">
+        <div class="edu-mock-title">⭐ Fun English Worksheets for Kids!</div>
+        <div class="edu-mock-sub">¡Aprende inglés jugando! · Learn with fun activities</div>
+        <div class="mock-hub-nav">
+          <span class="mock-pill">🏠 Home</span>
+          <span class="mock-pill">📝 Grammar</span>
+          <span class="mock-pill">🔢 Numbers</span>
+          <span class="mock-pill">🐾 Animals</span>
+        </div>
+        <div class="mock-hub-grid">
+          <div class="mock-tile"><div class="mock-tile-icon">📝</div><div class="mock-tile-label">Grammar</div></div>
+          <div class="mock-tile"><div class="mock-tile-icon">🔢</div><div class="mock-tile-label">Numbers</div></div>
+          <div class="mock-tile"><div class="mock-tile-icon">🐾</div><div class="mock-tile-label">Animals</div></div>
+          <div class="mock-tile"><div class="mock-tile-icon">⚡</div><div class="mock-tile-label">Verbs</div></div>
+        </div>
+      </div>
+      <div class="edu-info">
+        <span class="edu-tag">Plataforma educativa</span>
+        <h3 class="edu-title">Fun English Worksheets for Kids</h3>
+        <p class="edu-desc">Hub interactivo con cuadernillos de gramática, vocabulario, animales, verbos y más. Navegación colorida y amigable pensada para niños, con instrucciones bilingües (inglés/español).</p>
+      </div>
+    </div>
+
+    <!-- Card 2: Vocabulary App -->
+    <div class="edu-card">
+      <div class="edu-mock mock-vocab">
+        <div class="mock-vocab-bar">
+          <div class="mock-vocab-stat"><div class="mock-vocab-num">0</div><div class="mock-vocab-lbl">Points</div></div>
+          <div class="mock-vocab-stat"><div class="mock-vocab-num">0</div><div class="mock-vocab-lbl">Streak</div></div>
+          <div class="mock-vocab-stat"><div class="mock-vocab-num">1</div><div class="mock-vocab-lbl">Level</div></div>
+        </div>
+        <div class="mock-vocab-tabs">
+          <span class="mock-tab active">🐾 Animals</span>
+          <span class="mock-tab">🍎 Food</span>
+          <span class="mock-tab">🎨 Colors</span>
+        </div>
+        <div class="mock-vocab-grid">
+          <div class="mock-vocab-card"><div class="mock-vocab-icon">🐶</div><div class="mock-vocab-en">Dog</div><div class="mock-vocab-es">Perro</div></div>
+          <div class="mock-vocab-card"><div class="mock-vocab-icon">🐱</div><div class="mock-vocab-en">Cat</div><div class="mock-vocab-es">Gato</div></div>
+          <div class="mock-vocab-card"><div class="mock-vocab-icon">🐦</div><div class="mock-vocab-en">Bird</div><div class="mock-vocab-es">Pájaro</div></div>
+          <div class="mock-vocab-card"><div class="mock-vocab-icon">🐘</div><div class="mock-vocab-en">Elephant</div><div class="mock-vocab-es">Elefante</div></div>
+        </div>
+      </div>
+      <div class="edu-info">
+        <span class="edu-tag">App interactiva · Gamificación</span>
+        <h3 class="edu-title">English Adventure — Vocabulary App</h3>
+        <p class="edu-desc">Sistema de aprendizaje gamificado con puntos, racha y niveles. Tarjetas táctiles con audio y traducción para reforzar vocabulario por categorías (animales, comida, colores, escuela).</p>
+      </div>
+    </div>
+
+    <!-- Card 3: Games -->
+    <div class="edu-card">
+      <div class="edu-mock mock-games">
+        <div class="mock-games-title">✦ English Adventure ✦</div>
+        <div class="mock-games-row">
+          <div class="mock-game-box">🐾<div class="mock-game-label">Crossword</div></div>
+          <div class="mock-game-box">🏃<div class="mock-game-label">Verb Puzzle</div></div>
+          <div class="mock-game-box">😊<div class="mock-game-label">Hangman</div>
+            <div class="mock-letters">
+              <div class="mock-letter">A</div><div class="mock-letter">B</div><div class="mock-letter">C</div>
+              <div class="mock-letter">D</div><div class="mock-letter">E</div><div class="mock-letter">F</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="edu-info">
+        <span class="edu-tag">Juegos didácticos</span>
+        <h3 class="edu-title">Mini-juegos: Crossword, Verbs & Hangman</h3>
+        <p class="edu-desc">Suite de minijuegos educativos — crucigramas, emparejamiento de verbos regulares/irregulares y ahorcado — que convierten la práctica de inglés en una experiencia divertida y memorable.</p>
+      </div>
+    </div>
+
   </div>
 </section>
 
